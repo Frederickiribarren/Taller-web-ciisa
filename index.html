@@ -11,6 +11,17 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <style>
+        body {
+            background-color: #ebf7f9;
+            opacity: 0.8;
+            background-image: radial-gradient(#7ce1f9 0.5px, #ebf7f9 0.5px);
+            background-size: 10px 10px;
+        }
+
+        .imagen-cambio {
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+
         .ir-arriba {
             display: none;
             padding: 20px;
@@ -98,10 +109,10 @@
     <section id="index.html" class="container">
         <div class="container-fluid row vh-100 d-flex align-items-center justify-content-center py-5">
             <div class="d-flex align-items-center justify-content-center">
-                <img class="img-fluid" src="img/portada.jpg" alt="" width="700">
+                <img class="img-fluid imagen-cambio" src="img/portada.jpg" alt="" width="700">
             </div>
             <div class="d-flex flex-column px-5 justify-content-center align-items-center">
-                <h1 class="pb-5">Clinica Lawliet</h1>
+                <h1 class="pb-5 fw-bold">Clinica Lawliet</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nam unde, facere voluptas recusandae
                     nostrum hic atque pariatur reprehenderit nobis nihil, aliquid quae enim, in illum quidem eos
                     quisquam?
@@ -118,7 +129,7 @@
 
     <section id="card-mascota" class="py-3 container">
         <div class="py-5 d-flex align-items-center justify-content-center">
-            <h1>Carnet De Mascotas</h1>
+            <h2 class="fw-bold">Carnet De Mascotas</h2>
         </div>
         <div class="row gap-5 d-flex align-items-center justify-content-center">
             <div class="card mb-3" style="max-width: 540px;">
@@ -223,7 +234,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Bonito</h5>
+                            <h5 class="card-title">Pejelagarto</h5>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Nº 327445</li>
                                 <li class="list-group-item">Edad : Desconocido</li>
@@ -245,7 +256,7 @@
     <section id="picture-mascotas" class="py-3">
         <div class="container">
             <div class="py-5 d-flex align-items-center justify-content-center">
-                <h2>Fotos Animales</h2>
+                <h2 class="fw-bold">Fotos Animales</h2>
             </div>
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
@@ -303,7 +314,7 @@
 
     <section id="table-vacunas" class="container py-3">
         <div class="py-5 d-flex align-items-center justify-content-center">
-            <h2>Vacunas</h2>
+            <h2 class="fw-bold">Vacunas</h2>
         </div>
         <div>
             <table class="table table-striped">
@@ -831,7 +842,7 @@
 
     <section id="form" class="container py-3 mb-5">
         <div class="py-5 d-flex align-items-center justify-content-center">
-            <h2>Formulario para consultas</h2>
+            <h2 class="fw-bold">Formulario para consultas</h2>
         </div>
         <div class="row">
             <div class="py-5 d-flex align-items-center justify-content-center col">
