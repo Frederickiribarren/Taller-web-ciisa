@@ -12,11 +12,13 @@
 
     <style>
         body {
-            background-color: #ebf7f9;
-            opacity: 0.8;
-            background-image: radial-gradient(#7ce1f9 0.5px, #ebf7f9 0.5px);
-            background-size: 10px 10px;
+
+
+            background: linear-gradient(135deg, orange 60%, cyan);
         }
+
+
+
 
         .imagen-cambio {
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
@@ -53,6 +55,12 @@
                 }
             });
         });
+
+    </script>
+    <script>
+        function enviar() {
+            alert("hola")
+        }
     </script>
 
 
@@ -846,7 +854,7 @@
         </div>
         <div class="row">
             <div class="py-5 d-flex align-items-center justify-content-center col">
-                <form class="" style="width: 500px;">
+                <form class="" style="width: 500px;" onsubmit="obtenerFormulario">
                     <div class="mb-4">
                         <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" required>
                     </div>
@@ -881,7 +889,8 @@
                             placeholder="Comentarios"></textarea>
                     </div>
                     <div class="mb-4 d-flex align-items-center justify-content-center">
-                        <button type="submit" class="btn btn-outline-info" style="width: 30%;">Enviar</button>
+                        <button type="submit" class="btn btn-outline-info" style="width: 30%;"
+                            id="enviar">Enviar</button>
                     </div>
                 </form>
             </div>
