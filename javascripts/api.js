@@ -8,10 +8,9 @@ $(document).ready(function(){
             for(var i = 0; i < animales.length; i++){
                 var fila = ""
                 fila = "<tr><td>"+animales[i].nombre+"</td><td>"+animales[i].tipo+"</td><td>"+animales[i].genero+"</td><td>"+animales[i].edad+"</td><td>"+animales[i].vacunas+"</td></tr>"
-                $("#mascot").append(fila)
+                
             }
 
-            document.getElementById('tbody').innerHTML = fila
 
             new DataTable('#mascot', {
                 "data": animales,
