@@ -131,7 +131,7 @@ function enviarFormulario(elemento){
 	elemento.preventDefault()
 	Swal.fire({
 		title: "Envio Exitoso!",
-		text: "Nos pondremos en contacto la brevedad!",
+		text: "Nos pondremos en contacto la a brevedad!",
 		icon: "success"
 	  })
 	  resetearFormulario()
