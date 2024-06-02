@@ -11,7 +11,7 @@ $(document).ready(function(){
                 $("#mascot").append(fila)
             }
 
-            document.getElementById('tbody').innerHTML = fila;
+            document.getElementById('tbody').innerHTML = fila
 
             new DataTable('#mascot', {
                 "data": animales,
