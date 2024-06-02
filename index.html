@@ -11,15 +11,6 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 
     <style>
-        body {
-
-
-            background: linear-gradient(135deg, orange 60%, cyan);
-        }
-
-
-
-
         .imagen-cambio {
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
         }
@@ -37,32 +28,15 @@
             border-radius: 5px;
             z-index: 1;
         }
-    </style>
 
-    <script>
-        $(document).ready(function () {
-            $('.ir-arriba').click(function () {
-                $('body, html').animate({
-                    scrollTop: '0px'
-                }, 300);
-            });
-
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 0) {
-                    $('.ir-arriba').slideDown(300);
-                } else {
-                    $('.ir-arriba').slideUp(300);
-                }
-            });
-        });
-
-    </script>
-    <script>
-        function enviar() {
-            alert("hola")
+        .error-mostrar {
+            border: 3px solid red
         }
-    </script>
 
+        .correcto {
+            border: 3px solid green
+        }
+    </style>
 
 </head>
 
@@ -854,20 +828,25 @@
         </div>
         <div class="row">
             <div class="py-5 d-flex align-items-center justify-content-center col">
-                <form class="" style="width: 500px;" onsubmit="obtenerFormulario">
-                    <div class="mb-4">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" required>
+                <form class="forms" id="forms" style="width: 500px;" onsubmit="obtenerFormulario">
+                    <div class=" mb-4">
+                        <label for="text" class="pb-2 ps-3">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Frederick"
+                            aria-label="First name" name="nombre">
                     </div>
-                    <div class="mb-4">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Email" required>
+
+                    <div class=" mb-4 form-group">
+                        <label for="email" class="pb-2 ps-3">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="xxxxxxxxxxxx@gmail.com" name="correo">
                     </div>
-                    <div class="mb-4">
-                        <label for="">Fecha de vacunacion </label>
-                        <input type="date">
+
+                    <div class="mb-4 form-group">
+                        <label for="date" class="ps-3">Fecha de vacunacion </label>
+                        <input type="date" name="seleccion" id="seleccion">
                     </div>
-                    <div class="mb-4">
-                        <select class="form-select" aria-label="Default select example">
+                    <div class="mb-4 form-group">
+                        <select class="form-select" aria-label="Default select example" id="vacunas">
                             <option selected>Vacunas</option>
                             <option value="1">Parvovirus</option>
                             <option value="2">Bordetella</option>
@@ -880,13 +859,14 @@
                             <option value="9">Borrelia</option>
                         </select>
                     </div>
-                    <div class="mb-4">
-                        <label for="">proxima vacuna </label>
-                        <input type="date">
+                    <div class="mb-4 form-group">
+                        <label for="tel" class="pb-2 ps-3">Telefono</label>
+                        <input type="tel" class="form-control" id="telefono""
+                            placeholder=" 9xxxxxxxx" name="telefono">
                     </div>
-                    <div>
-                        <textarea class="form-control mb-4" id="exampleFormControlTextarea1" rows="3"
-                            placeholder="Comentarios"></textarea>
+                    <div class="mb-4 form-group">
+                        <textarea class="form-control" id="comentarios" rows="3" placeholder="Comentarios"
+                            name="comentarios"></textarea>
                     </div>
                     <div class="mb-4 d-flex align-items-center justify-content-center">
                         <button type="submit" class="btn btn-outline-info" style="width: 30%;"
@@ -933,7 +913,9 @@
     <!--FIN FOOTER-->
 
 
-
+    <script src="javascripts/flechainicio.js"></script>
+    <script src="javascripts/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
