@@ -4,12 +4,6 @@ $(document).ready(function(){
         datatype:'json',
         success:function(data){
             var animales = data.data
-            console.log(animales)
-            for(var i = 0; i < animales.length; i++){
-                var fila = ""
-                fila = "<tr><td>"+animales[i].nombre+"</td><td>"+animales[i].tipo+"</td><td>"+animales[i].genero+"</td><td>"+animales[i].edad+"</td><td>"+animales[i].vacunas+"</td></tr>"
-                
-            }
 
 
             new DataTable('#mascot', {

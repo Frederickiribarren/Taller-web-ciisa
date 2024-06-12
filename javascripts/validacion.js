@@ -1,6 +1,6 @@
 
 	const resultadoEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-	const usuario = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
+	const usuario = /^[a-zA-ZÀ-ÿ\s]{2,40}$/ // Letras y espacios, pueden llevar acentos.
 	const celular = /^\d{9,14}$/ // 9 a 14 numeros.
 
 
@@ -95,7 +95,7 @@ function validarInformacion(elemento) {
 		} else {
 			elemento.target.classList.remove('correcto')
 			elemento.target.classList.add('error-mostrar')
-			mostrarError('Puede contener letras, espacios, acentos.')
+			mostrarError('Puede contener letras, espacios, acentos y mas de un caracter.')
 		}
 	}
 

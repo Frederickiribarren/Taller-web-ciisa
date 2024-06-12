@@ -82,6 +82,9 @@
                         <a class="nav-link text-white" href="#info-mascotas">Mascotas</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="#tabla-agregar">Tabla</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="#form">Formulario</a>
                     </li>
                 </ul>
@@ -845,10 +848,65 @@
 
     </section>
 
+    <!--FIN TABLA DE VACUNAS-->
+
+    <!--TABLA-->
+
+    <section id="tabla-agregar" class="container w-25 mt-5">
+        <div class="d-flex align-items-center justify-content-center">
+            <h2 class="fw-bold">Tabla</h2>
+        </div>
+        <form action="" id="formu">
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="formGroupExampleInput" class="form-label fw-bold">Nombre</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3 col">
+                    <label for="formGroupExampleInput2" class="form-label fw-bold">Seccion</label>
+                    <input type="number" class="form-control" id="seccion">
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="formGroupExampleInput" class="form-label fw-bold">Profesor</label>
+                    <input type="text" class="form-control" id="profesor">
+                </div>
+                <div class="mb-3 col">
+                    <label for="formGroupExampleInput2" class="form-label fw-bold">Nota</label>
+                    <input type="number" class="form-control" id="nota">
+                </div>
+            </div>
+            <div>
+                <button onclick="agregarFilaTabla($('#formu input'))" type="button" class="btn btn-primary"
+                    id="subir">Subir</button>
+                <button type="reset" class="btn btn-danger">reset</button>
+            </div>
+
+        </form>
+    </section>
 
 
 
+    <section class="container pt-5">
+        <table class="table border-info" id="periodica">
+            <thead>
+                <tr>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">SECCION</th>
+                    <th scope="col">PROFESOR</th>
+                    <th scope="col">NOTA</th>
+                    <th scope="col">ESTADO</th>
+                </tr>
+            </thead>
+            <tbody>
 
+            </tbody>
+        </table>
+    </section>
+
+
+    <!--FIN TABLA-->
 
     <!--FORMULARIO-->
 
@@ -951,6 +1009,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/3.0.2/js/buttons.html5.min.js"></script>
+    <script src="javascripts/funcion.js"></script>
     <script src="javascripts/api.js"></script>
     <script src="javascripts/flechainicio.js"></script>
     <script src="javascripts/validacion.js"></script>
